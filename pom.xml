@@ -8,5 +8,7 @@
     <artifactId>Soundstalker-V2</artifactId>
     <version>1.0</version>
 
+    <url>http://maven.apache.org</url>
+
 
 </project>
