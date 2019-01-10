@@ -1,4 +1,4 @@
-package Controllers;
+package gui;
 
 public class PrimaryController {
 }
