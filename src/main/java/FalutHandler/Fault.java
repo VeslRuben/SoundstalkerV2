@@ -5,9 +5,9 @@ import java.util.Date;
 public class Fault implements  Comparable<Fault>{
 
 
-    static final int critical = 1;
-    static final int serious = 2;
-    static final int warning = 3;
+    public static final int critical = 1;
+    public static final int serious = 2;
+    public static final int warning = 3;
 
     private static int nextId;
 
