@@ -7,7 +7,7 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.Controllers.CPanelSceneController">
   <columnConstraints>
     <ColumnConstraints hgrow="SOMETIMES" maxWidth="395.0" minWidth="10.0" prefWidth="170.0" />
     <ColumnConstraints hgrow="SOMETIMES" maxWidth="650.0" minWidth="10.0" prefWidth="626.0" />
@@ -17,27 +17,20 @@
   </rowConstraints>
    <children>
       <VBox prefHeight="200.0" prefWidth="100.0">
-         <children>
-            <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="50.0" text="Main" />
-            <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="50.0" text="Music" />
-            <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="50.0" text="Controls" />
-            <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="50.0" text="Control Panel" />
-            <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="50.0" text="Status" />
-            <GridPane prefHeight="230.0">
-              <columnConstraints>
-                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="70.0" />
-              </columnConstraints>
-              <rowConstraints>
-                <RowConstraints vgrow="SOMETIMES" />
-              </rowConstraints>
-               <children>
-                  <VBox prefHeight="200.0" prefWidth="100.0" spacing="10.0">
-                     <children>
-                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Battery" />
-                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Forventet levetid" />
-                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Errors" />
-                     </children>
+          <children>
+              <Button fx:id="mainBtn" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#clickMainBtn" prefHeight="50.0" text="Main" />
+              <Button fx:id="musicBtn" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#clickMusicBtn" prefHeight="50.0" text="Music" />
+              <Button fx:id="controlsBtn" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#clickControlsBtn" prefHeight="50.0" text="Controls" />
+              <Button fx:id="controlPanelBtn" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#clickControlPanelBtn" prefHeight="50.0" text="Control Panel" />
+              <Button fx:id="statusBtn" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#clickStatusBtn" prefHeight="50.0" text="Status" />
+              <GridPane prefHeight="230.0">
+                  <children>
+                      <VBox prefHeight="200.0" prefWidth="100.0" spacing="10.0">
+                          <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Battery.Battery" />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Forventet levetid" />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Errors" />
+                          </children>
                      <GridPane.margin>
                         <Insets />
                      </GridPane.margin>
@@ -53,6 +46,13 @@
                      </children>
                   </VBox>
                </children>
+               <columnConstraints>
+                  <ColumnConstraints />
+                  <ColumnConstraints />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints />
+               </rowConstraints>
             </GridPane>
          </children>
       </VBox>
@@ -78,7 +78,7 @@
                   <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
               </rowConstraints>
                <children>
-                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Battery">
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Battery.Battery">
                      <font>
                         <Font size="18.0" />
                      </font>

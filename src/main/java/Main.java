@@ -1,23 +1,21 @@
+import FalutHandler.FaultHandler;
 import MotorSystem.PidController;
+import gui.Controllers.MainSceneController;
+import javafx.scene.control.TextField;
 
 import java.util.concurrent.TimeUnit;
 
-public class Main{
+public class Main {
+
 
     public static void main(String[] args) throws InterruptedException {
-//        Thread GUI = new Thread( new GUI());
-//        GUI.run();
-//        Thread.sleep(10000);
-//        System.out.println("yolo");
-        TimeWatch timer = new TimeWatch();
-        timer.start();
-        int a = 0;
-        for (int i = 0; i < 1000; i++) {
-            a += i;
+        Thread GUI = new Thread(new GUI());
+        GUI.run();
+        System.out.println("yolo");
+        for(int x = 0; x<10; x++) {
+            Battery.Battery.setYolo(x);
+            Thread.sleep(4000);
+
         }
-        long elapsedTime = timer.elapsedTime(TimeUnit.MICROSECONDS);
-        System.out.println(elapsedTime);
-        elapsedTime = timer.elapsedTime(TimeUnit.MICROSECONDS);
-        System.out.println(elapsedTime);
     }
 }

@@ -14,7 +14,7 @@ public class GUI extends Application implements Runnable {
 
     @Override
     public void start(Stage stage) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("/GUI.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/FXML/MainScreen.fxml"));
         stage.setTitle("SoundStalker");
         stage.getIcons().add(new Image("https://i.redd.it/mvilmzrjn1921.jpg"));
         stage.setScene(new Scene(root));
