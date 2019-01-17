@@ -75,7 +75,7 @@ public class StatusSceneController implements Initializable {
                 System.out.println(method.getName() + " = " + value);
                 if(value instanceof Double && method.getName() == "getSystemCpuLoad"){
                     cpuLoad = (double) value;
-                }
+                } el
                 //systemData.put(method.getName(), (double) value);
             }
         }
