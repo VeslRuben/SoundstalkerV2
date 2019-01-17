@@ -6,7 +6,7 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="200.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="gui.Controllers.NumpadController">
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="200.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.Controllers.NumpadController">
   <columnConstraints>
     <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
     <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -48,7 +48,7 @@
             <Button fx:id="buttonClear" mnemonicParsing="false" onAction="#clickButtonClear" prefHeight="80.0" prefWidth="50.0" text="C" />
          </children>
       </VBox>
-      <Text fx:id="numpadText" strokeType="OUTSIDE" strokeWidth="0.0" text="0,123" GridPane.columnSpan="4">
+      <Text fx:id="numpadText" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnSpan="4">
          <font>
             <Font size="18.0" />
          </font>

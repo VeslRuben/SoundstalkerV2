@@ -75,7 +75,6 @@ public class ControlsSceneController implements Initializable {
                         //TODO: Notify the PIDController
                         //TODO: Retain information in case of misclick, and closing the window without editing
                     }
-
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
@@ -103,7 +102,6 @@ public class ControlsSceneController implements Initializable {
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
-
             }
         });
 
@@ -128,7 +126,6 @@ public class ControlsSceneController implements Initializable {
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
-
             }
         });
     }

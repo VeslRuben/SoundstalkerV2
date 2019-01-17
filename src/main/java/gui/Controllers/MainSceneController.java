@@ -40,7 +40,7 @@ public class MainSceneController implements Initializable {
         // Updates every 5 seconds
         Timeline everyFive = new Timeline(new KeyFrame(Duration.seconds(5), new EventHandler<ActionEvent>() {
             public void handle(ActionEvent event) {
-                batteryLevelText.setText("81%"); //TODO add batery level
+                batteryLevelText.setText("81%"); //TODO add battery level
                 batteryLifeTimeText.setText("yolo"); //TODO add battery lifetime
                 errorNumberText.setText("69"); //TODO add error error count
             }

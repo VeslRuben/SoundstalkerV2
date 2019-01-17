@@ -18,7 +18,7 @@ public class GUI extends Application implements Runnable {
         stage.setTitle("SoundStalker");
         stage.getIcons().add(new Image("https://i.redd.it/mvilmzrjn1921.jpg"));
         stage.setScene(new Scene(root));
-        stage.setResizable(true);
+        stage.setResizable(false);
         stage.setMaxHeight(480);
         stage.setMaxWidth(800);
         stage.show();

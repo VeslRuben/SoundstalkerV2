@@ -11,11 +11,11 @@ public class Main {
     public static void main(String[] args) throws InterruptedException {
         Thread GUI = new Thread(new GUI());
         GUI.start();
-        System.out.println("Gui thred started");
+        System.out.println("GUI thread started");
 
         Thread motorController = new Thread(new MotorController());
         motorController.start();
-        System.out.println("motorcontroller thred started");
+        System.out.println("MotorController thread started");
 
     }
 

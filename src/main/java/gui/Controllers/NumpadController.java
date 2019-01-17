@@ -23,12 +23,10 @@ public class NumpadController implements Initializable {
     public static String numpadValue;
 
     public void initialize(URL loc, ResourceBundle resource) {
-        numpadText.setText("");
         numpadValue = "";
     }
 
     public void clickButtonOne(ActionEvent actionEvent) {
-        //TODO: Add functionality to numpad buttons
         numpadText.setText(numpadText.getText() + "1");
     }
 
