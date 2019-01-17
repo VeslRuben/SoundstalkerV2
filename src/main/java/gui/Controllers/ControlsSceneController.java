@@ -72,6 +72,7 @@ public class ControlsSceneController implements Initializable {
                     stage.showAndWait();
                     if(!stage.isShowing()) {
                         pValuePID.setText(NumpadController.numpadValue);
+                        //TODO: Notify the PIDController
                     }
 
                 } catch (IOException e) {
@@ -95,6 +96,7 @@ public class ControlsSceneController implements Initializable {
                     stage.showAndWait();
                     if(!stage.isShowing()) {
                         iValuePID.setText(NumpadController.numpadValue);
+                        //TODO: Notify the PIDController
                     }
                 } catch (IOException e) {
                     e.printStackTrace();
@@ -118,6 +120,7 @@ public class ControlsSceneController implements Initializable {
                     stage.showAndWait();
                     if(!stage.isShowing()) {
                         dValuePID.setText(NumpadController.numpadValue);
+                        //TODO: Notify the PIDController
                     }
                 } catch (IOException e) {
                     e.printStackTrace();

@@ -75,7 +75,7 @@ public class NumpadController implements Initializable {
     }
 
     public void clickButtonClear(ActionEvent actionEvent) {
-        numpadValue = "";
+        numpadText.setText("");
     }
 
     public void clickCommaButton(ActionEvent actionEvent) {
