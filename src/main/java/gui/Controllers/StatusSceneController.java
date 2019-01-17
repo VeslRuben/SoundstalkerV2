@@ -13,6 +13,8 @@ import java.io.IOException;
 
 public class StatusSceneController {
 
+
+
     @FXML
     public Text coreTempText;
 
@@ -46,7 +48,7 @@ public class StatusSceneController {
     @FXML
     public Text remainingLifeText;
 
-
+    @SuppressWarnings("Duplicates")
     public void clickControlsBtn(ActionEvent actionEvent) {
         Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
         Parent root = null;
@@ -58,6 +60,7 @@ public class StatusSceneController {
         }
     }
 
+    @SuppressWarnings("Duplicates")
     public void clickMainBtn(ActionEvent actionEvent) {
         Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
         Parent root = null;
@@ -69,6 +72,7 @@ public class StatusSceneController {
         }
     }
 
+    @SuppressWarnings("Duplicates")
     public void clickMusicBtn(ActionEvent actionEvent) {
         Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
         Parent root = null;
@@ -80,6 +84,7 @@ public class StatusSceneController {
         }
     }
 
+    @SuppressWarnings("Duplicates")
     public void clickControlPanelBtn(ActionEvent actionEvent) {
         Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
         Parent root = null;
@@ -91,6 +96,7 @@ public class StatusSceneController {
         }
     }
 
+    @SuppressWarnings("Duplicates")
     public void clickStatusBtn(ActionEvent actionEvent) {
         Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
         Parent root = null;

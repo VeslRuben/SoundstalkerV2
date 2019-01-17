@@ -14,6 +14,8 @@ import java.io.IOException;
 
 public class CPanelSceneController {
 
+    @SuppressWarnings("Duplicates")
+
     @FXML
     public Text batteryLevelText;
 
@@ -41,6 +43,7 @@ public class CPanelSceneController {
         }
     }
 
+    @SuppressWarnings("Duplicates")
     public void clickMainBtn(ActionEvent actionEvent) {
         Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
         Parent root = null;
@@ -52,6 +55,7 @@ public class CPanelSceneController {
         }
     }
 
+    @SuppressWarnings("Duplicates")
     public void clickMusicBtn(ActionEvent actionEvent) {
         Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
         Parent root = null;
@@ -63,6 +67,7 @@ public class CPanelSceneController {
         }
     }
 
+    @SuppressWarnings("Duplicates")
     public void clickControlPanelBtn(ActionEvent actionEvent) {
         Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
         Parent root = null;
@@ -74,6 +79,7 @@ public class CPanelSceneController {
         }
     }
 
+    @SuppressWarnings("Duplicates")
     public void clickStatusBtn(ActionEvent actionEvent) {
         Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
         Parent root = null;

@@ -1,5 +1,6 @@
 package gui.Controllers;
 
+
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
 import javafx.event.ActionEvent;
@@ -30,21 +31,23 @@ public class MainSceneController implements Initializable {
     public Text errorNumberText;
 
     public void initialize(URL loc, ResourceBundle resource) {
-        Timeline everyFive = new Timeline(new KeyFrame(Duration.seconds(5), new EventHandler<ActionEvent>() {
 
+        // Updates every 5 seconds
+        Timeline everyFive = new Timeline(new KeyFrame(Duration.seconds(5), new EventHandler<ActionEvent>() {
             public void handle(ActionEvent event) {
-                System.out.println("Yolo, funker dette?");
-                int x = Battery.Battery.yoloChange();
-                batteryLevelText.setText("" + x);
+                batteryLevelText.setText("81%"); //TODO add batery level
+                batteryLifeTimeText.setText("yolo"); //TODO add battery lifetime
+                errorNumberText.setText("69"); //TODO add error error count
             }
         }));
         everyFive.setCycleCount(Timeline.INDEFINITE);
         everyFive.play();
     }
 
+    @SuppressWarnings("Duplicates")
     public void clickControlsBtn(ActionEvent actionEvent) {
         Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
-        Parent root = null;
+        Parent root;
         try {
             root = FXMLLoader.load(getClass().getResource("/FXML/ControlsScreen.fxml"));
             stage.setScene(new Scene(root, 800, 480));
@@ -53,9 +56,10 @@ public class MainSceneController implements Initializable {
         }
     }
 
+    @SuppressWarnings("Duplicates")
     public void clickMainBtn(ActionEvent actionEvent) {
         Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
-        Parent root = null;
+        Parent root;
         try {
             root = FXMLLoader.load(getClass().getResource("/FXML/MainScreen.fxml"));
             stage.setScene(new Scene(root, 800, 480));
@@ -64,9 +68,10 @@ public class MainSceneController implements Initializable {
         }
     }
 
+    @SuppressWarnings("Duplicates")
     public void clickMusicBtn(ActionEvent actionEvent) {
         Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
-        Parent root = null;
+        Parent root;
         try {
             root = FXMLLoader.load(getClass().getResource("/FXML/MusicScreen.fxml"));
             stage.setScene(new Scene(root, 800, 480));
@@ -75,9 +80,10 @@ public class MainSceneController implements Initializable {
         }
     }
 
+    @SuppressWarnings("Duplicates")
     public void clickControlPanelBtn(ActionEvent actionEvent) {
         Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
-        Parent root = null;
+        Parent root;
         try {
             root = FXMLLoader.load(getClass().getResource("/FXML/CPanelScreen.fxml"));
             stage.setScene(new Scene(root, 800, 480));
@@ -86,9 +92,10 @@ public class MainSceneController implements Initializable {
         }
     }
 
+    @SuppressWarnings("Duplicates")
     public void clickStatusBtn(ActionEvent actionEvent) {
         Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
-        Parent root = null;
+        Parent root;
         try {
             root = FXMLLoader.load(getClass().getResource("/FXML/StatusScreen.fxml"));
             stage.setScene(new Scene(root, 800, 480));
