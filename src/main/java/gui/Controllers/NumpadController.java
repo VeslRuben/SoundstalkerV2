@@ -79,7 +79,7 @@ public class NumpadController implements Initializable {
     }
 
     public void clickCommaButton(ActionEvent actionEvent) {
-        if(numpadText.getText().contains(".")) {
+        if(numpadText.getText().contains(".") || numpadText.getText().equals("")) {
             //Do nothing
         } else {
             numpadText.setText(numpadText.getText() + ".");
