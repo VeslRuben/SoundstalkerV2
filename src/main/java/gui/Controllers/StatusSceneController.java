@@ -3,6 +3,7 @@ package gui.Controllers;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -10,8 +11,15 @@ import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.lang.management.ManagementFactory;
+import java.lang.management.OperatingSystemMXBean;
+import java.lang.reflect.Method;
+import java.lang.reflect.Modifier;
+import java.net.URL;
+import java.util.HashMap;
+import java.util.ResourceBundle;
 
-public class StatusSceneController {
+public class StatusSceneController implements Initializable {
 
 
 
@@ -47,6 +55,33 @@ public class StatusSceneController {
 
     @FXML
     public Text remainingLifeText;
+
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+        HashMap<String, Double> systemData = new HashMap<>();
+        double cpuLoad;
+        OperatingSystemMXBean operatingSystemMXBean = ManagementFactory.getOperatingSystemMXBean();
+        for (Method method : operatingSystemMXBean.getClass().getDeclaredMethods()) {
+            method.setAccessible(true);
+            if (method.getName().startsWith("get")
+                    && Modifier.isPublic(method.getModifiers())) {
+                Object value;
+                try {
+
+                    value = method.invoke(operatingSystemMXBean);
+                } catch (Exception e) {
+                    value = e;
+                }
+                System.out.println(method.getName() + " = " + value);
+                if(value instanceof Double && method.getName() == "getSystemCpuLoad"){
+                    cpuLoad = (double) value;
+                }
+                //systemData.put(method.getName(), (double) value);
+            }
+        }
+        double ramUsage = systemData.get("getTotalPhysicalMemorySize") / systemData.get("getFreePhysicalMemorySize");
+        System.out.println(ramUsage);
+    }
 
     @SuppressWarnings("Duplicates")
     public void clickControlsBtn(ActionEvent actionEvent) {
@@ -107,4 +142,6 @@ public class StatusSceneController {
             e.printStackTrace();
         }
     }
+
+
 }

@@ -11,6 +11,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.paint.Color;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import javafx.util.Duration;
@@ -31,6 +32,7 @@ public class MainSceneController implements Initializable {
     public Text errorNumberText;
 
     public void initialize(URL loc, ResourceBundle resource) {
+
 
         // Updates every 5 seconds
         Timeline everyFive = new Timeline(new KeyFrame(Duration.seconds(5), new EventHandler<ActionEvent>() {

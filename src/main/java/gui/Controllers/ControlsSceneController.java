@@ -3,6 +3,7 @@ package gui.Controllers;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -11,16 +12,17 @@ import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.net.URL;
+import java.util.ResourceBundle;
 
-public class ControlsSceneController {
+public class ControlsSceneController implements Initializable {
 
-    @SuppressWarnings("Duplicates")
-
-    @FXML
-    public ComboBox distanceDropDown;
 
     @FXML
-    public ComboBox speedDropDown;
+    public ComboBox<Double> distanceDropDown;
+
+    @FXML
+    public ComboBox<Integer> speedDropDown;
 
     @FXML
     public TextField pValuePID;
@@ -32,7 +34,20 @@ public class ControlsSceneController {
     public TextField dValuePID;
 
 
+    public void initialize(URL loc, ResourceBundle resource) {
+        for(double x = 0.5; x <= 5; x += 0.5) {
+            distanceDropDown.getItems().add(x);
+        }
+        distanceDropDown.setValue(3.0);
 
+        for(int speed = 1; speed <= 10; speed++){
+            speedDropDown.getItems().add(speed);
+        }
+        speedDropDown.setValue(5);
+    }
+
+
+    @SuppressWarnings("Duplicates")
     public void clickControlsBtn(ActionEvent actionEvent) {
         Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
         Parent root = null;
