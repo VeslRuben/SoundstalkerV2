@@ -69,14 +69,6 @@ public class CPanelSceneController {
 
     @SuppressWarnings("Duplicates")
     public void clickControlPanelBtn(ActionEvent actionEvent) {
-        Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
-        Parent root = null;
-        try {
-            root = FXMLLoader.load(getClass().getResource("/FXML/CPanelScreen.fxml"));
-            stage.setScene(new Scene(root, 800, 480));
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
     }
 
     @SuppressWarnings("Duplicates")

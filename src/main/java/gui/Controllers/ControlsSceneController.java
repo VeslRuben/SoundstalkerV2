@@ -7,6 +7,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
@@ -33,6 +34,12 @@ public class ControlsSceneController implements Initializable {
     @FXML
     public TextField dValuePID;
 
+    @FXML
+    public Button controlsBtn;
+
+    @FXML
+    public Button mainBtn;
+
 
     public void initialize(URL loc, ResourceBundle resource) {
         for(double x = 0.5; x <= 5; x += 0.5) {
@@ -49,14 +56,6 @@ public class ControlsSceneController implements Initializable {
 
     @SuppressWarnings("Duplicates")
     public void clickControlsBtn(ActionEvent actionEvent) {
-        Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
-        Parent root = null;
-        try {
-            root = FXMLLoader.load(getClass().getResource("/FXML/ControlsScreen.fxml"));
-            stage.setScene(new Scene(root, 800, 480));
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
     }
 
     @SuppressWarnings("Duplicates")

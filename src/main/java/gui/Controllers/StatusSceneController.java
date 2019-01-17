@@ -133,14 +133,6 @@ public class StatusSceneController implements Initializable {
 
     @SuppressWarnings("Duplicates")
     public void clickStatusBtn(ActionEvent actionEvent) {
-        Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
-        Parent root = null;
-        try {
-            root = FXMLLoader.load(getClass().getResource("/FXML/StatusScreen.fxml"));
-            stage.setScene(new Scene(root, 800, 480));
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
     }
 
 

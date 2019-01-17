@@ -12,6 +12,7 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.paint.Color;
+import javafx.scene.control.Button;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import javafx.util.Duration;
@@ -31,8 +32,10 @@ public class MainSceneController implements Initializable {
     @FXML
     public Text errorNumberText;
 
-    public void initialize(URL loc, ResourceBundle resource) {
+    @FXML
+    public Button mainBtn;
 
+    public void initialize(URL loc, ResourceBundle resource) {
 
         // Updates every 5 seconds
         Timeline everyFive = new Timeline(new KeyFrame(Duration.seconds(5), new EventHandler<ActionEvent>() {
@@ -60,14 +63,7 @@ public class MainSceneController implements Initializable {
 
     @SuppressWarnings("Duplicates")
     public void clickMainBtn(ActionEvent actionEvent) {
-        Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
-        Parent root;
-        try {
-            root = FXMLLoader.load(getClass().getResource("/FXML/MainScreen.fxml"));
-            stage.setScene(new Scene(root, 800, 480));
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+
     }
 
     @SuppressWarnings("Duplicates")
