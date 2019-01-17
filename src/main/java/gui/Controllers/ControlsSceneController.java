@@ -3,16 +3,20 @@ package gui.Controllers;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.net.URL;
+import java.util.ResourceBundle;
 
-public class ControlsSceneController {
+public class ControlsSceneController implements Initializable {
 
     @SuppressWarnings("Duplicates")
 
@@ -31,17 +35,16 @@ public class ControlsSceneController {
     @FXML
     public TextField dValuePID;
 
+    @FXML
+    public Button controlsBtn;
 
+    @FXML
+    public Button mainBtn;
+
+    public void initialize(URL loc, ResourceBundle resource) {
+    }
 
     public void clickControlsBtn(ActionEvent actionEvent) {
-        Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
-        Parent root = null;
-        try {
-            root = FXMLLoader.load(getClass().getResource("/FXML/ControlsScreen.fxml"));
-            stage.setScene(new Scene(root, 800, 480));
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
     }
 
     @SuppressWarnings("Duplicates")

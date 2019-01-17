@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="200.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="gui.Controllers.NumpadController">
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+  </columnConstraints>
+  <rowConstraints>
+      <RowConstraints minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+    <RowConstraints minHeight="10.0" prefHeight="160.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <VBox prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="1">
+         <children>
+            <Button fx:id="buttonOne" mnemonicParsing="false" onAction="#clickButtonOne" prefHeight="40.0" prefWidth="50.0" text="1" />
+            <Button fx:id="buttonFour" mnemonicParsing="false" onAction="#clickButtonFour" prefHeight="40.0" prefWidth="50.0" text="4" />
+            <Button fx:id="buttonSeven" mnemonicParsing="false" onAction="#clickButtonSeven" prefHeight="40.0" prefWidth="50.0" text="7" />
+            <Button fx:id="commaButton" mnemonicParsing="false" onAction="#clickCommaButton" prefHeight="40.0" prefWidth="50.0" text="," />
+         </children>
+      </VBox>
+      <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+         <children>
+            <Button fx:id="buttonTwo" mnemonicParsing="false" onAction="#clickButtonTwo" prefHeight="40.0" prefWidth="50.0" text="2" />
+            <Button fx:id="buttonFive" mnemonicParsing="false" onAction="#clickButtonFive" prefHeight="40.0" prefWidth="50.0" text="5" />
+            <Button fx:id="buttonEight" mnemonicParsing="false" onAction="#clickButtonEight" prefHeight="40.0" prefWidth="50.0" text="8" />
+            <Button fx:id="buttonZero" mnemonicParsing="false" onAction="#clickButtonZero" prefHeight="40.0" prefWidth="50.0" text="0" />
+         </children>
+      </VBox>
+      <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+         <children>
+            <Button fx:id="buttonThree" mnemonicParsing="false" onAction="#clickButtonThree" prefHeight="40.0" prefWidth="50.0" text="3" />
+            <Button fx:id="buttonSix" mnemonicParsing="false" onAction="#clickButtonSix" prefHeight="40.0" prefWidth="50.0" text="6" />
+            <Button fx:id="buttonNine" mnemonicParsing="false" onAction="#clickButtonNine" prefHeight="40.0" prefWidth="50.0" text="9" />
+            <Button fx:id="backSpaceButton" mnemonicParsing="false" onAction="#clickBackSpaceButton" prefHeight="40.0" prefWidth="50.0" text="&lt;-" />
+         </children>
+      </VBox>
+      <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="3" GridPane.rowIndex="1">
+         <children>
+            <Button fx:id="buttonOk" mnemonicParsing="false" onAction="#clickButtonOk" prefHeight="80.0" prefWidth="50.0" text="OK" />
+            <Button fx:id="buttonClear" mnemonicParsing="false" onAction="#clickButtonClear" prefHeight="80.0" prefWidth="50.0" text="C" />
+         </children>
+      </VBox>
+      <Text fx:id="numpadText" strokeType="OUTSIDE" strokeWidth="0.0" text="0,123" GridPane.columnSpan="4">
+         <font>
+            <Font size="18.0" />
+         </font>
+         <GridPane.margin>
+            <Insets left="5.0" />
+         </GridPane.margin>
+      </Text>
+   </children>
+</GridPane>

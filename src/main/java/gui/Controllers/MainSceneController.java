@@ -11,6 +11,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import javafx.util.Duration;
@@ -29,6 +30,9 @@ public class MainSceneController implements Initializable {
 
     @FXML
     public Text errorNumberText;
+
+    @FXML
+    public Button mainBtn;
 
     public void initialize(URL loc, ResourceBundle resource) {
 
@@ -58,14 +62,7 @@ public class MainSceneController implements Initializable {
 
     @SuppressWarnings("Duplicates")
     public void clickMainBtn(ActionEvent actionEvent) {
-        Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
-        Parent root;
-        try {
-            root = FXMLLoader.load(getClass().getResource("/FXML/MainScreen.fxml"));
-            stage.setScene(new Scene(root, 800, 480));
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+
     }
 
     @SuppressWarnings("Duplicates")
