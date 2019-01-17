@@ -79,18 +79,16 @@ public class NumpadController implements Initializable {
     }
 
     public void clickCommaButton(ActionEvent actionEvent) {
-        if(numpadValue.contains(".")) {
-            numpadValue = numpadValue;
+        if(numpadText.getText().contains(".")) {
+            //Do nothing
         } else {
-            numpadValue = numpadValue + ".";
             numpadText.setText(numpadText.getText() + ".");
         }
     }
 
     public void clickBackSpaceButton(ActionEvent actionEvent) {
-        if(numpadValue.length() > 0 && numpadValue != null) {
+        if(numpadText.getText().length() > 0 && numpadText.getText() != null) {
             numpadText.setText(numpadText.getText().substring(0, numpadText.getText().length() - 1));
-            numpadValue = numpadValue.substring(0, numpadValue.length() - 1);
         }
     }
 }
