@@ -1,16 +1,9 @@
-import FalutHandler.FaultHandler;
-import MotorSystem.PidController;
-import gui.Controllers.MainSceneController;
-import javafx.scene.control.TextField;
-
-import java.util.concurrent.TimeUnit;
-
 public class Main {
 
 
     public static void main(String[] args) throws InterruptedException {
         Thread GUI = new Thread(new GUI());
-        GUI.run();
+        GUI.start();
         System.out.println("yolo");
         for(int x = 0; x<10; x++) {
             Battery.Battery.setYolo(x);

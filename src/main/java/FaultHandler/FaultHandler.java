@@ -1,6 +1,6 @@
-package FalutHandler;
+package FaultHandler;
 
-import MotorSystem.MotorConroller;
+import MotorSystem.MotorController;
 
 import java.util.ArrayList;
 import java.util.concurrent.locks.ReentrantLock;
@@ -22,7 +22,7 @@ public class FaultHandler {
     }
 
     public void supscribe(FaultAction instance) {
-        if (instance instanceof MotorConroller) {
+        if (instance instanceof MotorController) {
             subscribers.add(instance);
         }
     }

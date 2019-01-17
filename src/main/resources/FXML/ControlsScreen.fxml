@@ -26,7 +26,7 @@
                   <children>
                       <VBox prefHeight="200.0" prefWidth="100.0" spacing="10.0">
                           <children>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Battery.Battery" />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Battery" />
                               <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Forventet levetid" />
                               <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Errors" />
                           </children>
@@ -67,9 +67,9 @@
          <children>
             <VBox prefHeight="200.0" prefWidth="100.0" spacing="10.0" GridPane.columnIndex="2">
                <children>
-                  <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="50.0" text="Warm Restart" />
-                  <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="50.0" text="Rett Fram" />
-                  <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="50.0" text="Space Age Fuck You Manuell" />
+                  <Button fx:id="warmRestartBtn" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#clickWarmRestartBtn" prefHeight="50.0" text="Warm Restart" />
+                  <Button fx:id="rettFramBtn" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#clickRettFramBtn" prefHeight="50.0" text="Rett Fram" />
+                  <Button fx:id="spaceAgeBtn" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#clickSpaceAgeBtn" prefHeight="50.0" text="Space Age Fuck You Manuell" />
                </children>
                <padding>
                   <Insets top="60.0" />
@@ -97,8 +97,8 @@
                         <Font size="18.0" />
                      </font>
                   </Text>
-                  <ComboBox prefHeight="50.0" prefWidth="150.0" promptText="Distance" GridPane.rowIndex="1" />
-                  <ComboBox prefHeight="50.0" prefWidth="150.0" promptText="Speed" GridPane.rowIndex="3" />
+                  <ComboBox fx:id="distanceDropDown" prefHeight="50.0" prefWidth="150.0" promptText="Distance" GridPane.rowIndex="1" />
+                  <ComboBox fx:id="speedDropDown" prefHeight="50.0" prefWidth="150.0" promptText="Speed" GridPane.rowIndex="3" />
                </children>
             </GridPane>
             <GridPane GridPane.columnIndex="1">
@@ -126,9 +126,9 @@
                         <Font size="18.0" />
                      </font>
                   </Text>
-                  <TextField alignment="CENTER" maxWidth="150.0" promptText="Value" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
-                  <TextField alignment="CENTER" maxWidth="150.0" promptText="Value" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
-                  <TextField alignment="CENTER" maxWidth="150.0" promptText="Value" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
+                  <TextField fx:id="pValuePID" alignment="CENTER" maxWidth="150.0" promptText="Value" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                  <TextField fx:id="iValuePID" alignment="CENTER" maxWidth="150.0" promptText="Value" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
+                  <TextField fx:id="dValuePID" alignment="CENTER" maxWidth="150.0" promptText="Value" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
                </children>
             </GridPane>
          </children>

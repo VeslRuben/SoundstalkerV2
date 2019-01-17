@@ -1,8 +1,8 @@
 package MotorSystem;
 
-import FalutHandler.FaultAction;
+import FaultHandler.FaultAction;
 
-public class MotorConroller implements FaultAction, Runnable {
+public class MotorController implements FaultAction, Runnable {
 
 
     public void run() {

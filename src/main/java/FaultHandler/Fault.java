@@ -1,4 +1,4 @@
-package FalutHandler;
+package FaultHandler;
 
 import java.util.Date;
 

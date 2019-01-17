@@ -1,7 +1,5 @@
 package gui.Controllers;
 
-import FalutHandler.FaultHandler;
-import MotorSystem.MotorConroller;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
 import javafx.event.ActionEvent;
@@ -97,5 +95,13 @@ public class MainSceneController implements Initializable {
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    public void clickOnBtn(ActionEvent actionEvent) {
+        //TODO: Make functionality for On-button
+    }
+
+    public void clickOffBtn(ActionEvent actionEvent) {
+        //TODO: Make functionality for Off-button
     }
 }

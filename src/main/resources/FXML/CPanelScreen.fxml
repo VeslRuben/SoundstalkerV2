@@ -27,7 +27,7 @@
                   <children>
                       <VBox prefHeight="200.0" prefWidth="100.0" spacing="10.0">
                           <children>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Battery.Battery" />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Battery" />
                               <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Forventet levetid" />
                               <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Errors" />
                           </children>
@@ -78,7 +78,7 @@
                   <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
               </rowConstraints>
                <children>
-                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Battery.Battery">
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Battery">
                      <font>
                         <Font size="18.0" />
                      </font>
@@ -87,7 +87,7 @@
                   <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="75.0" stroke="BLACK" strokeType="INSIDE" width="150.0" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
                   <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="75.0" stroke="BLACK" strokeType="INSIDE" width="150.0" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
                   <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="75.0" stroke="BLACK" strokeType="INSIDE" width="150.0" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER" />
-                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="75%" GridPane.rowIndex="1">
+                  <Text fx:id="batteryLevelText" strokeType="OUTSIDE" strokeWidth="0.0" text="75%" GridPane.rowIndex="1">
                      <font>
                         <Font size="24.0" />
                      </font>
@@ -101,7 +101,7 @@
                         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                     </rowConstraints>
                      <children>
-                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="1t 28min" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                        <Text fx:id="batteryLifeTimeText" strokeType="OUTSIDE" strokeWidth="0.0" text="1t 28min" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                            <font>
                               <Font size="18.0" />
                            </font>
@@ -111,7 +111,7 @@
                   </GridPane>
                   <GridPane GridPane.rowIndex="3">
                      <children>
-                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="45t 23min" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                        <Text fx:id="batteryChargeTimeText" strokeType="OUTSIDE" strokeWidth="0.0" text="45t 23min" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                            <font>
                               <Font size="18.0" />
                            </font>
@@ -128,7 +128,7 @@
                   </GridPane>
                   <GridPane GridPane.rowIndex="4">
                      <children>
-                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="79C" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                        <Text fx:id="batteryTemperatureText" strokeType="OUTSIDE" strokeWidth="0.0" text="79C" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                            <font>
                               <Font size="18.0" />
                            </font>
@@ -161,7 +161,7 @@
                         <Font size="18.0" />
                      </font>
                   </Text>
-                  <ScrollPane maxWidth="450.0" prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
+                  <ScrollPane fx:id="errorScrollPane" maxWidth="450.0" prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
                     <content>
                       <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" />
                     </content>
@@ -171,8 +171,8 @@
                   </ScrollPane>
                   <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="50.0" GridPane.rowIndex="2">
                      <children>
-                        <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="150.0" text="Clear All" />
-                        <Button alignment="CENTER" mnemonicParsing="false" prefHeight="30.0" prefWidth="150.0" text="Info" />
+                        <Button fx:id="clearAllBtn" mnemonicParsing="false" onAction="#clickClearAllBtn" prefHeight="30.0" prefWidth="150.0" text="Clear All" />
+                        <Button fx:id="infoBtn" alignment="CENTER" mnemonicParsing="false" onAction="#clickInfoBtn" prefHeight="30.0" prefWidth="150.0" text="Info" />
                      </children>
                   </HBox>
                </children>

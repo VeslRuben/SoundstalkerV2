@@ -27,7 +27,7 @@
                <children>
                   <VBox prefHeight="200.0" prefWidth="100.0" spacing="10.0">
                      <children>
-                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Battery.Battery" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Battery" />
                         <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Forventet levetid" />
                         <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Errors" />
                      </children>
@@ -97,7 +97,7 @@
                               <Font size="14.0" />
                            </font>
                         </Text>
-                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Battery.Battery">
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Battery">
                            <font>
                               <Font size="14.0" />
                            </font>
@@ -114,17 +114,17 @@
                   </VBox>
                   <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" spacing="5.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
                      <children>
-                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
+                        <Text fx:id="coreTempText" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
                            <font>
                               <Font size="14.0" />
                            </font>
                         </Text>
-                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
+                        <Text fx:id="batteryTempText" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
                            <font>
                               <Font size="14.0" />
                            </font>
                         </Text>
-                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
+                        <Text fx:id="ambientTempText" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
                            <font>
                               <Font size="14.0" />
                            </font>
@@ -150,7 +150,7 @@
                   </VBox>
                   <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
                      <children>
-                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
+                        <Text fx:id="sonicSensorValueText" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
                            <font>
                               <Font size="14.0" />
                            </font>
@@ -181,12 +181,12 @@
                   </VBox>
                   <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" spacing="5.0" GridPane.columnIndex="1" GridPane.rowIndex="5">
                      <children>
-                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
+                        <Text fx:id="motor1LoadText" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
                            <font>
                               <Font size="14.0" />
                            </font>
                         </Text>
-                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
+                        <Text fx:id="motor2LoadText" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
                            <font>
                               <Font size="14.0" />
                            </font>
@@ -217,12 +217,12 @@
                   </VBox>
                   <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="7">
                      <children>
-                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
+                        <Text fx:id="cpuLoadText" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
                            <font>
                               <Font size="14.0" />
                            </font>
                         </Text>
-                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
+                        <Text fx:id="ramLoadText" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
                            <font>
                               <Font size="14.0" />
                            </font>
@@ -271,17 +271,17 @@
                   </VBox>
                   <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" spacing="5.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
                      <children>
-                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
+                        <Text fx:id="currentTimeActiveText" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
                            <font>
                               <Font size="14.0" />
                            </font>
                         </Text>
-                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
+                        <Text fx:id="totalDistanceText" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
                            <font>
                               <Font size="14.0" />
                            </font>
                         </Text>
-                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
+                        <Text fx:id="remainingLifeText" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
                            <font>
                               <Font size="14.0" />
                            </font>

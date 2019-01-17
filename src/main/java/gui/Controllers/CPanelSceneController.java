@@ -1,15 +1,35 @@
 package gui.Controllers;
 
 import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.ScrollPane;
+import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 import java.io.IOException;
 
 public class CPanelSceneController {
+
+    @FXML
+    public Text batteryLevelText;
+
+    @FXML
+    public Text batteryLifeTimeText;
+
+    @FXML
+    public Text batteryChargeTimeText;
+
+    @FXML
+    public Text batteryTemperatureText;
+
+    @FXML
+    public ScrollPane errorScrollPane;
+
+
     public void clickControlsBtn(ActionEvent actionEvent) {
         Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
         Parent root = null;
@@ -63,5 +83,13 @@ public class CPanelSceneController {
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    public void clickClearAllBtn(ActionEvent actionEvent) {
+        //TODO: Make functionality for Clear All-button
+    }
+
+    public void clickInfoBtn(ActionEvent actionEvent) {
+        //TODO: Make functionality for Info-button
     }
 }

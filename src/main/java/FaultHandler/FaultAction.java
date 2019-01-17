@@ -1,4 +1,4 @@
-package FalutHandler;
+package FaultHandler;
 
 public interface FaultAction {
     /**
