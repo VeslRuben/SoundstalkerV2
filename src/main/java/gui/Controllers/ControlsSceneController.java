@@ -1,6 +1,7 @@
 package gui.Controllers;
 
 import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -10,7 +11,11 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
+import javafx.scene.input.MouseButton;
+import javafx.stage.Modality;
 import javafx.stage.Stage;
+import javafx.stage.WindowEvent;
 
 import java.io.IOException;
 import java.net.URL;
@@ -40,7 +45,7 @@ public class ControlsSceneController implements Initializable {
     @FXML
     public Button mainBtn;
 
-
+    @SuppressWarnings("Duplicates")
     public void initialize(URL loc, ResourceBundle resource) {
         for(double x = 0.5; x <= 5; x += 0.5) {
             distanceDropDown.getItems().add(x);
@@ -51,6 +56,75 @@ public class ControlsSceneController implements Initializable {
             speedDropDown.getItems().add(speed);
         }
         speedDropDown.setValue(5);
+
+        pValuePID.setOnMouseClicked(event -> {
+            if(event.getButton() == MouseButton.PRIMARY) {
+                try {
+                    Stage stage = new Stage();
+                    Parent root = FXMLLoader.load(getClass().getResource("/FXML/NumpadScreen.fxml"));
+                    stage.initModality(Modality.APPLICATION_MODAL);
+                    stage.setTitle("Numpad");
+                    stage.getIcons().add(new Image("https://i.redd.it/mvilmzrjn1921.jpg"));
+                    stage.setScene(new Scene(root));
+                    stage.setResizable(false);
+                    stage.setMaxHeight(200);
+                    stage.setMaxWidth(200);
+                    stage.showAndWait();
+                    if(!stage.isShowing()) {
+                        pValuePID.setText(NumpadController.numpadValue);
+                    }
+
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        });
+
+        iValuePID.setOnMouseClicked(event -> {
+            if(event.getButton() == MouseButton.PRIMARY) {
+                try {
+                    Stage stage = new Stage();
+                    Parent root = FXMLLoader.load(getClass().getResource("/FXML/NumpadScreen.fxml"));
+                    stage.initModality(Modality.APPLICATION_MODAL);
+                    stage.setTitle("Numpad");
+                    stage.getIcons().add(new Image("https://i.redd.it/mvilmzrjn1921.jpg"));
+                    stage.setScene(new Scene(root));
+                    stage.setResizable(false);
+                    stage.setMaxHeight(200);
+                    stage.setMaxWidth(200);
+                    stage.showAndWait();
+                    if(!stage.isShowing()) {
+                        iValuePID.setText(NumpadController.numpadValue);
+                    }
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+
+            }
+        });
+
+        dValuePID.setOnMouseClicked(event -> {
+            if(event.getButton() == MouseButton.PRIMARY) {
+                try {
+                    Stage stage = new Stage();
+                    Parent root = FXMLLoader.load(getClass().getResource("/FXML/NumpadScreen.fxml"));
+                    stage.initModality(Modality.APPLICATION_MODAL);
+                    stage.setTitle("Numpad");
+                    stage.getIcons().add(new Image("https://i.redd.it/mvilmzrjn1921.jpg"));
+                    stage.setScene(new Scene(root));
+                    stage.setResizable(false);
+                    stage.setMaxHeight(200);
+                    stage.setMaxWidth(200);
+                    stage.showAndWait();
+                    if(!stage.isShowing()) {
+                        dValuePID.setText(NumpadController.numpadValue);
+                    }
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+
+            }
+        });
     }
 
 
@@ -118,4 +192,6 @@ public class ControlsSceneController implements Initializable {
         //TODO: Make functionality for Space Age-button
 
     }
+
+
 }

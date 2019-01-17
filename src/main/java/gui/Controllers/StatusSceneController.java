@@ -89,6 +89,7 @@ public class StatusSceneController implements Initializable {
             if (method.getName().startsWith("get") && Modifier.isPublic(method.getModifiers())) {
                 Object value;
                 try {
+
                     value = method.invoke(operatingSystemMXBean);
                 } catch (Exception e) {
                     value = e;

@@ -62,7 +62,7 @@
           <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
         </columnConstraints>
         <rowConstraints>
-          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="480.0" minHeight="480.0" prefHeight="480.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
             <GridPane>
@@ -150,9 +150,9 @@
                 <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
               </columnConstraints>
               <rowConstraints>
-                <RowConstraints maxHeight="40.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                <RowConstraints maxHeight="500.0" minHeight="10.0" prefHeight="350.0" vgrow="SOMETIMES" />
-                <RowConstraints maxHeight="50.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="40.0" minHeight="40.0" prefHeight="40.0" />
+                <RowConstraints maxHeight="390.0" minHeight="390.0" prefHeight="390.0" />
+                <RowConstraints maxHeight="50.0" minHeight="50.0" prefHeight="50.0" />
                   <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
               </rowConstraints>
                <children>
@@ -161,9 +161,9 @@
                         <Font size="18.0" />
                      </font>
                   </Text>
-                  <ScrollPane fx:id="errorScrollPane" maxWidth="450.0" prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
+                  <ScrollPane fx:id="errorScrollPane" fitToHeight="true" fitToWidth="true" maxHeight="390.0" maxWidth="450.0" minHeight="390.0" prefHeight="390.0" prefWidth="450.0" GridPane.rowIndex="1">
                     <content>
-                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" />
+                      <AnchorPane maxHeight="390.0" maxWidth="410.0" minHeight="390.0" minWidth="410.0" prefHeight="390.0" prefWidth="410.0" />
                     </content>
                      <GridPane.margin>
                         <Insets right="5.0" />
