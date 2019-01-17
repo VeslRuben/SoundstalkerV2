@@ -73,6 +73,7 @@ public class ControlsSceneController implements Initializable {
                     if(!stage.isShowing()) {
                         pValuePID.setText(NumpadController.numpadValue);
                         //TODO: Notify the PIDController
+                        //TODO: Retain information in case of misclick, and closing the window without editing
                     }
 
                 } catch (IOException e) {
@@ -97,6 +98,7 @@ public class ControlsSceneController implements Initializable {
                     if(!stage.isShowing()) {
                         iValuePID.setText(NumpadController.numpadValue);
                         //TODO: Notify the PIDController
+                        //TODO: Retain information in case of misclick, and closing the window without editing
                     }
                 } catch (IOException e) {
                     e.printStackTrace();
@@ -121,6 +123,7 @@ public class ControlsSceneController implements Initializable {
                     if(!stage.isShowing()) {
                         dValuePID.setText(NumpadController.numpadValue);
                         //TODO: Notify the PIDController
+                        //TODO: Retain information in case of misclick, and closing the window without editing
                     }
                 } catch (IOException e) {
                     e.printStackTrace();
