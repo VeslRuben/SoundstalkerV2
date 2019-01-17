@@ -2,7 +2,6 @@ package FalutHandler;
 
 import MotorSystem.MotorConroller;
 
-import java.util.ArrayList;
 import java.util.concurrent.locks.ReentrantLock;
 
 public class FaultHandler {
@@ -11,20 +10,18 @@ public class FaultHandler {
     private static FaultHandler instance;
 
     private FaultRegistry faultRegistry;
-    private ArrayList<FaultAction> subscribers;
+    private FaultAction motorController;
     private final ReentrantLock thredLock;
 
     private FaultHandler() {
         instance = this;
         this.faultRegistry = new FaultRegistry();
         this.thredLock = new ReentrantLock();
-        subscribers = new ArrayList<FaultAction>();
+
     }
 
-    public void supscribe(FaultAction instance) {
-        if (instance instanceof MotorConroller) {
-            subscribers.add(instance);
-        }
+    public void supscribeMotorcontroller(FaultAction instance) {
+            this.motorController = instance;
     }
 
     /**
@@ -64,16 +61,20 @@ public class FaultHandler {
      */
     private void takeAction(Fault fault) {
 
-        if (fault.getLevel() == Fault.critical) {
-            //TODO shutdown motorcontroller
-            //TODO notify GUI.
-        } else if (fault.getLevel() == Fault.serious) {
-            for(FaultAction subscriber : subscribers) {
-                subscriber.respondToFault(fault.getFaultCode(), fault.getFaultId());
-            }
-        } else {
+       switch (fault.getFaultCode()){
+           case 1000 :
+            motorController.respondToFault(fault.getFaultCode(), fault.getFaultId());
+           break;
+
+           case 2000:
+
+               break;
+
+
+        default:
             throw new RuntimeException(String.format("fault not handeld. fault code: %s. fault message: %s", fault.getFaultCode(), fault.getMessage()));
         }
+        //TODO notify GUI.
     }
 
     public synchronized void reportActionTaken(int faultId) {

@@ -1,13 +1,16 @@
 package MotorSystem;
 
 import FalutHandler.FaultAction;
+import FalutHandler.FaultHandler;
 
 public class MotorConroller implements FaultAction, Runnable {
 
 
     public void run() {
+        FaultHandler.getInstance().supscribeMotorcontroller(this);
 
     }
+
 
     public synchronized void respondToFault(int faultCode, int faultId){
         //TODO set som flags to tell the motorcontroller wat to do
