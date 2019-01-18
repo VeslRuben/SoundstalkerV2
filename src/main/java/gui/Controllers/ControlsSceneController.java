@@ -29,13 +29,22 @@ public class ControlsSceneController implements Initializable {
     public ComboBox<Integer> speedDropDown;
 
     @FXML
-    public TextField pValuePID;
+    public TextField vPValuePID;
 
     @FXML
-    public TextField iValuePID;
+    public TextField vIValuePID;
 
     @FXML
-    public TextField dValuePID;
+    public TextField vDValuePID;
+
+    @FXML
+    public TextField hPValuePID;
+
+    @FXML
+    public TextField hIValuePID;
+
+    @FXML
+    public TextField hDValuePID;
 
     @FXML
     public Button controlsBtn;
@@ -55,10 +64,10 @@ public class ControlsSceneController implements Initializable {
         }
         speedDropDown.setValue(5);
 
-        pValuePID.setOnMouseClicked(event -> {
+        vPValuePID.setOnMouseClicked(event -> {
             if(event.getButton() == MouseButton.PRIMARY) {
                 try {
-                    NumpadController.oldValue = pValuePID.getText();
+                    NumpadController.oldValue = vPValuePID.getText();
                     Stage stage = new Stage();
                     Parent root = FXMLLoader.load(getClass().getResource("/FXML/NumpadScreen.fxml"));
                     stage.initModality(Modality.APPLICATION_MODAL);
@@ -70,7 +79,7 @@ public class ControlsSceneController implements Initializable {
                     stage.setMaxWidth(200);
                     stage.showAndWait();
                     if(!stage.isShowing()) {
-                        pValuePID.setText(NumpadController.numpadValue);
+                        vPValuePID.setText(NumpadController.numpadValue);
                         //TODO: Notify the PIDController
                     }
                 } catch (IOException e) {
@@ -79,10 +88,10 @@ public class ControlsSceneController implements Initializable {
             }
         });
 
-        iValuePID.setOnMouseClicked(event -> {
+        vIValuePID.setOnMouseClicked(event -> {
             if(event.getButton() == MouseButton.PRIMARY) {
                 try {
-                    NumpadController.oldValue = iValuePID.getText();
+                    NumpadController.oldValue = vIValuePID.getText();
                     Stage stage = new Stage();
                     Parent root = FXMLLoader.load(getClass().getResource("/FXML/NumpadScreen.fxml"));
                     stage.initModality(Modality.APPLICATION_MODAL);
@@ -94,7 +103,7 @@ public class ControlsSceneController implements Initializable {
                     stage.setMaxWidth(200);
                     stage.showAndWait();
                     if(!stage.isShowing()) {
-                        iValuePID.setText(NumpadController.numpadValue);
+                        vIValuePID.setText(NumpadController.numpadValue);
                         //TODO: Notify the PIDController
                     }
                 } catch (IOException e) {
@@ -103,10 +112,10 @@ public class ControlsSceneController implements Initializable {
             }
         });
 
-        dValuePID.setOnMouseClicked(event -> {
+        vDValuePID.setOnMouseClicked(event -> {
             if(event.getButton() == MouseButton.PRIMARY) {
                 try {
-                    NumpadController.oldValue = dValuePID.getText();
+                    NumpadController.oldValue = vDValuePID.getText();
                     Stage stage = new Stage();
                     Parent root = FXMLLoader.load(getClass().getResource("/FXML/NumpadScreen.fxml"));
                     stage.initModality(Modality.APPLICATION_MODAL);
@@ -118,7 +127,79 @@ public class ControlsSceneController implements Initializable {
                     stage.setMaxWidth(200);
                     stage.showAndWait();
                     if(!stage.isShowing()) {
-                        dValuePID.setText(NumpadController.numpadValue);
+                        vDValuePID.setText(NumpadController.numpadValue);
+                        //TODO: Notify the PIDController
+                    }
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        });
+
+        hPValuePID.setOnMouseClicked(event -> {
+            if(event.getButton() == MouseButton.PRIMARY) {
+                try {
+                    NumpadController.oldValue = hPValuePID.getText();
+                    Stage stage = new Stage();
+                    Parent root = FXMLLoader.load(getClass().getResource("/FXML/NumpadScreen.fxml"));
+                    stage.initModality(Modality.APPLICATION_MODAL);
+                    stage.setTitle("Numpad");
+                    stage.getIcons().add(new Image("https://i.redd.it/mvilmzrjn1921.jpg"));
+                    stage.setScene(new Scene(root));
+                    stage.setResizable(false);
+                    stage.setMaxHeight(200);
+                    stage.setMaxWidth(200);
+                    stage.showAndWait();
+                    if(!stage.isShowing()) {
+                        hPValuePID.setText(NumpadController.numpadValue);
+                        //TODO: Notify the PIDController
+                    }
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        });
+
+        hIValuePID.setOnMouseClicked(event -> {
+            if(event.getButton() == MouseButton.PRIMARY) {
+                try {
+                    NumpadController.oldValue = hIValuePID.getText();
+                    Stage stage = new Stage();
+                    Parent root = FXMLLoader.load(getClass().getResource("/FXML/NumpadScreen.fxml"));
+                    stage.initModality(Modality.APPLICATION_MODAL);
+                    stage.setTitle("Numpad");
+                    stage.getIcons().add(new Image("https://i.redd.it/mvilmzrjn1921.jpg"));
+                    stage.setScene(new Scene(root));
+                    stage.setResizable(false);
+                    stage.setMaxHeight(200);
+                    stage.setMaxWidth(200);
+                    stage.showAndWait();
+                    if(!stage.isShowing()) {
+                        hIValuePID.setText(NumpadController.numpadValue);
+                        //TODO: Notify the PIDController
+                    }
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        });
+
+        hDValuePID.setOnMouseClicked(event -> {
+            if(event.getButton() == MouseButton.PRIMARY) {
+                try {
+                    NumpadController.oldValue = hDValuePID.getText();
+                    Stage stage = new Stage();
+                    Parent root = FXMLLoader.load(getClass().getResource("/FXML/NumpadScreen.fxml"));
+                    stage.initModality(Modality.APPLICATION_MODAL);
+                    stage.setTitle("Numpad");
+                    stage.getIcons().add(new Image("https://i.redd.it/mvilmzrjn1921.jpg"));
+                    stage.setScene(new Scene(root));
+                    stage.setResizable(false);
+                    stage.setMaxHeight(200);
+                    stage.setMaxWidth(200);
+                    stage.showAndWait();
+                    if(!stage.isShowing()) {
+                        hDValuePID.setText(NumpadController.numpadValue);
                         //TODO: Notify the PIDController
                     }
                 } catch (IOException e) {
