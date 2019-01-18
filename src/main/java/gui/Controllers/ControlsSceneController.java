@@ -72,6 +72,7 @@ public class ControlsSceneController implements Initializable {
                         pValuePID.setText(NumpadController.numpadValue);
                         //TODO: Notify the PIDController
                         //TODO: Retain information in case of misclick, and closing the window without editing
+                        //TODO: shud not be posible to have more then one zero at the start
                     }
                 } catch (IOException e) {
                     e.printStackTrace();
