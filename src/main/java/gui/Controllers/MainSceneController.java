@@ -4,14 +4,12 @@ package gui.Controllers;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
 import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.paint.Color;
 import javafx.scene.control.Button;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
@@ -38,12 +36,10 @@ public class MainSceneController implements Initializable {
     public void initialize(URL loc, ResourceBundle resource) {
 
         // Updates every 5 seconds
-        Timeline everyFive = new Timeline(new KeyFrame(Duration.seconds(5), new EventHandler<ActionEvent>() {
-            public void handle(ActionEvent event) {
-                batteryLevelText.setText("81%"); //TODO add battery level
-                batteryLifeTimeText.setText("yolo"); //TODO add battery lifetime
-                errorNumberText.setText("69"); //TODO add error error count
-            }
+        Timeline everyFive = new Timeline(new KeyFrame(Duration.seconds(5), event -> {
+            batteryLevelText.setText("81%"); //TODO add battery level
+            batteryLifeTimeText.setText("yolo"); //TODO add battery lifetime
+            errorNumberText.setText("69"); //TODO add error error count
         }));
         everyFive.setCycleCount(Timeline.INDEFINITE);
         everyFive.play();
@@ -62,7 +58,7 @@ public class MainSceneController implements Initializable {
     }
 
     @SuppressWarnings("Duplicates")
-    public void clickMainBtn(ActionEvent actionEvent) {
+    public void clickMainBtn() {
 
     }
 

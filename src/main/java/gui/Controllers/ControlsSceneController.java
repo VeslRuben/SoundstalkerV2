@@ -1,7 +1,6 @@
 package gui.Controllers;
 
 import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -15,7 +14,6 @@ import javafx.scene.image.Image;
 import javafx.scene.input.MouseButton;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
-import javafx.stage.WindowEvent;
 
 import java.io.IOException;
 import java.net.URL;
@@ -132,13 +130,13 @@ public class ControlsSceneController implements Initializable {
 
 
     @SuppressWarnings("Duplicates")
-    public void clickControlsBtn(ActionEvent actionEvent) {
+    public void clickControlsBtn() {
     }
 
     @SuppressWarnings("Duplicates")
     public void clickMainBtn(ActionEvent actionEvent) {
         Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
-        Parent root = null;
+        Parent root;
         try {
             root = FXMLLoader.load(getClass().getResource("/FXML/MainScreen.fxml"));
             stage.setScene(new Scene(root, 800, 480));
@@ -150,7 +148,7 @@ public class ControlsSceneController implements Initializable {
     @SuppressWarnings("Duplicates")
     public void clickMusicBtn(ActionEvent actionEvent) {
         Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
-        Parent root = null;
+        Parent root;
         try {
             root = FXMLLoader.load(getClass().getResource("/FXML/MusicScreen.fxml"));
             stage.setScene(new Scene(root, 800, 480));
@@ -162,7 +160,7 @@ public class ControlsSceneController implements Initializable {
     @SuppressWarnings("Duplicates")
     public void clickControlPanelBtn(ActionEvent actionEvent) {
         Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
-        Parent root = null;
+        Parent root;
         try {
             root = FXMLLoader.load(getClass().getResource("/FXML/CPanelScreen.fxml"));
             stage.setScene(new Scene(root, 800, 480));
@@ -174,7 +172,7 @@ public class ControlsSceneController implements Initializable {
     @SuppressWarnings("Duplicates")
     public void clickStatusBtn(ActionEvent actionEvent) {
         Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
-        Parent root = null;
+        Parent root;
         try {
             root = FXMLLoader.load(getClass().getResource("/FXML/StatusScreen.fxml"));
             stage.setScene(new Scene(root, 800, 480));
@@ -183,15 +181,15 @@ public class ControlsSceneController implements Initializable {
         }
     }
 
-    public void clickWarmRestartBtn(ActionEvent actionEvent) {
+    public void clickWarmRestartBtn() {
         //TODO: Make functionality for warm restart-button
     }
 
-    public void clickRettFramBtn(ActionEvent actionEvent) {
+    public void clickRettFramBtn() {
         //TODO: Make functionality for Rett Fram-button
     }
 
-    public void clickSpaceAgeBtn(ActionEvent actionEvent) {
+    public void clickSpaceAgeBtn() {
         //TODO: Make functionality for Space Age-button
 
     }

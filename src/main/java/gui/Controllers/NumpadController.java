@@ -26,43 +26,43 @@ public class NumpadController implements Initializable {
         numpadValue = "";
     }
 
-    public void clickButtonOne(ActionEvent actionEvent) {
+    public void clickButtonOne() {
         numpadText.setText(numpadText.getText() + "1");
     }
 
-    public void clickButtonTwo(ActionEvent actionEvent) {
+    public void clickButtonTwo() {
         numpadText.setText(numpadText.getText() + "2");
     }
 
-    public void clickButtonThree(ActionEvent actionEvent) {
+    public void clickButtonThree() {
         numpadText.setText(numpadText.getText() + "3");
     }
 
-    public void clickButtonFour(ActionEvent actionEvent) {
+    public void clickButtonFour() {
         numpadText.setText(numpadText.getText() + "4");
     }
 
-    public void clickButtonFive(ActionEvent actionEvent) {
+    public void clickButtonFive() {
         numpadText.setText(numpadText.getText() + "5");
     }
 
-    public void clickButtonSix(ActionEvent actionEvent) {
+    public void clickButtonSix() {
         numpadText.setText(numpadText.getText() + "6");
     }
 
-    public void clickButtonSeven(ActionEvent actionEvent) {
+    public void clickButtonSeven() {
         numpadText.setText(numpadText.getText() + "7");
     }
 
-    public void clickButtonEight(ActionEvent actionEvent) {
+    public void clickButtonEight() {
         numpadText.setText(numpadText.getText() + "8");
     }
 
-    public void clickButtonNine(ActionEvent actionEvent) {
+    public void clickButtonNine() {
         numpadText.setText(numpadText.getText() + "9");
     }
 
-    public void clickButtonZero(ActionEvent actionEvent) {
+    public void clickButtonZero() {
         numpadText.setText(numpadText.getText() + "0");
     }
 
@@ -72,19 +72,17 @@ public class NumpadController implements Initializable {
         stage.close();
     }
 
-    public void clickButtonClear(ActionEvent actionEvent) {
+    public void clickButtonClear() {
         numpadText.setText("");
     }
 
-    public void clickCommaButton(ActionEvent actionEvent) {
-        if(numpadText.getText().contains(".") || numpadText.getText().equals("")) {
-            //Do nothing
-        } else {
+    public void clickCommaButton() {
+        if(!(numpadText.getText().contains(".") || numpadText.getText().equals(""))) {
             numpadText.setText(numpadText.getText() + ".");
         }
     }
 
-    public void clickBackSpaceButton(ActionEvent actionEvent) {
+    public void clickBackSpaceButton() {
         if(numpadText.getText().length() > 0 && numpadText.getText() != null) {
             numpadText.setText(numpadText.getText().substring(0, numpadText.getText().length() - 1));
         }

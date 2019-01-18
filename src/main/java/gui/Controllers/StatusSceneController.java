@@ -3,7 +3,6 @@ package gui.Controllers;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
 import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -69,12 +68,10 @@ public class StatusSceneController implements Initializable {
         cpuLoadText.setText(String.format("%.0f%s", sytemValues.get("CPU"), "%"));
 
         // Updates every 5 seconds
-        Timeline everyFive = new Timeline(new KeyFrame(Duration.seconds(5), new EventHandler<ActionEvent>() {
-            public void handle(ActionEvent event) {
-                HashMap<String, Double> sytemValues = getRamAndCpuUsage();
-                ramLoadText.setText(String.format("%.0f%s", sytemValues.get("RAM"), "%"));
-                cpuLoadText.setText(String.format("%.0f%s", sytemValues.get("CPU"), "%"));
-            }
+        Timeline everyFive = new Timeline(new KeyFrame(Duration.seconds(5), event -> {
+            HashMap<String, Double> sytemValues1 = getRamAndCpuUsage();
+            ramLoadText.setText(String.format("%.0f%s", sytemValues1.get("RAM"), "%"));
+            cpuLoadText.setText(String.format("%.0f%s", sytemValues1.get("CPU"), "%"));
         }));
         everyFive.setCycleCount(Timeline.INDEFINITE);
         everyFive.play();
@@ -111,7 +108,7 @@ public class StatusSceneController implements Initializable {
     @SuppressWarnings("Duplicates")
     public void clickControlsBtn(ActionEvent actionEvent) {
         Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
-        Parent root = null;
+        Parent root;
         try {
             root = FXMLLoader.load(getClass().getResource("/FXML/ControlsScreen.fxml"));
             stage.setScene(new Scene(root, 800, 480));
@@ -123,7 +120,7 @@ public class StatusSceneController implements Initializable {
     @SuppressWarnings("Duplicates")
     public void clickMainBtn(ActionEvent actionEvent) {
         Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
-        Parent root = null;
+        Parent root;
         try {
             root = FXMLLoader.load(getClass().getResource("/FXML/MainScreen.fxml"));
             stage.setScene(new Scene(root, 800, 480));
@@ -135,7 +132,7 @@ public class StatusSceneController implements Initializable {
     @SuppressWarnings("Duplicates")
     public void clickMusicBtn(ActionEvent actionEvent) {
         Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
-        Parent root = null;
+        Parent root;
         try {
             root = FXMLLoader.load(getClass().getResource("/FXML/MusicScreen.fxml"));
             stage.setScene(new Scene(root, 800, 480));
@@ -147,7 +144,7 @@ public class StatusSceneController implements Initializable {
     @SuppressWarnings("Duplicates")
     public void clickControlPanelBtn(ActionEvent actionEvent) {
         Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
-        Parent root = null;
+        Parent root;
         try {
             root = FXMLLoader.load(getClass().getResource("/FXML/CPanelScreen.fxml"));
             stage.setScene(new Scene(root, 800, 480));
@@ -157,7 +154,7 @@ public class StatusSceneController implements Initializable {
     }
 
     @SuppressWarnings("Duplicates")
-    public void clickStatusBtn(ActionEvent actionEvent) {
+    public void clickStatusBtn() {
     }
 
 

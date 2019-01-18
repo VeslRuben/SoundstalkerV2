@@ -42,9 +42,10 @@ public class CPanelSceneController implements Initializable {
 
     }
 
+    @SuppressWarnings("Duplicates")
     public void clickControlsBtn(ActionEvent actionEvent) {
         Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
-        Parent root = null;
+        Parent root;
         try {
             root = FXMLLoader.load(getClass().getResource("/FXML/ControlsScreen.fxml"));
             stage.setScene(new Scene(root, 800, 480));
@@ -56,7 +57,7 @@ public class CPanelSceneController implements Initializable {
     @SuppressWarnings("Duplicates")
     public void clickMainBtn(ActionEvent actionEvent) {
         Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
-        Parent root = null;
+        Parent root;
         try {
             root = FXMLLoader.load(getClass().getResource("/FXML/MainScreen.fxml"));
             stage.setScene(new Scene(root, 800, 480));
@@ -68,7 +69,7 @@ public class CPanelSceneController implements Initializable {
     @SuppressWarnings("Duplicates")
     public void clickMusicBtn(ActionEvent actionEvent) {
         Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
-        Parent root = null;
+        Parent root;
         try {
             root = FXMLLoader.load(getClass().getResource("/FXML/MusicScreen.fxml"));
             stage.setScene(new Scene(root, 800, 480));
@@ -78,13 +79,13 @@ public class CPanelSceneController implements Initializable {
     }
 
     @SuppressWarnings("Duplicates")
-    public void clickControlPanelBtn(ActionEvent actionEvent) {
+    public void clickControlPanelBtn() {
     }
 
     @SuppressWarnings("Duplicates")
     public void clickStatusBtn(ActionEvent actionEvent) {
         Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
-        Parent root = null;
+        Parent root;
         try {
             root = FXMLLoader.load(getClass().getResource("/FXML/StatusScreen.fxml"));
             stage.setScene(new Scene(root, 800, 480));
@@ -93,11 +94,11 @@ public class CPanelSceneController implements Initializable {
         }
     }
 
-    public void clickClearAllBtn(ActionEvent actionEvent) {
+    public void clickClearAllBtn() {
         //TODO: Make functionality for Clear All-button
     }
 
-    public void clickInfoBtn(ActionEvent actionEvent) {
+    public void clickInfoBtn() {
         //TODO: Make functionality for Info-button
     }
 }
