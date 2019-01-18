@@ -22,8 +22,12 @@ public class NumpadController implements Initializable {
 
     public static String numpadValue;
 
+    public static String oldValue;
+
     public void initialize(URL loc, ResourceBundle resource) {
+        System.out.println(oldValue);
         numpadValue = "";
+        numpadText.setText(oldValue);
     }
 
     public void clickButtonOne() {
@@ -63,7 +67,9 @@ public class NumpadController implements Initializable {
     }
 
     public void clickButtonZero() {
-        numpadText.setText(numpadText.getText() + "0");
+        if(!numpadText.getText().startsWith("0")) {
+            numpadText.setText(numpadText.getText() + "0");
+        }
     }
 
     public void clickButtonOk(ActionEvent actionEvent) {

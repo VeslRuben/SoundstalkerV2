@@ -58,6 +58,7 @@ public class ControlsSceneController implements Initializable {
         pValuePID.setOnMouseClicked(event -> {
             if(event.getButton() == MouseButton.PRIMARY) {
                 try {
+                    NumpadController.oldValue = pValuePID.getText();
                     Stage stage = new Stage();
                     Parent root = FXMLLoader.load(getClass().getResource("/FXML/NumpadScreen.fxml"));
                     stage.initModality(Modality.APPLICATION_MODAL);
@@ -71,8 +72,6 @@ public class ControlsSceneController implements Initializable {
                     if(!stage.isShowing()) {
                         pValuePID.setText(NumpadController.numpadValue);
                         //TODO: Notify the PIDController
-                        //TODO: Retain information in case of misclick, and closing the window without editing
-                        //TODO: shud not be posible to have more then one zero at the start
                     }
                 } catch (IOException e) {
                     e.printStackTrace();
@@ -83,6 +82,7 @@ public class ControlsSceneController implements Initializable {
         iValuePID.setOnMouseClicked(event -> {
             if(event.getButton() == MouseButton.PRIMARY) {
                 try {
+                    NumpadController.oldValue = iValuePID.getText();
                     Stage stage = new Stage();
                     Parent root = FXMLLoader.load(getClass().getResource("/FXML/NumpadScreen.fxml"));
                     stage.initModality(Modality.APPLICATION_MODAL);
@@ -96,7 +96,6 @@ public class ControlsSceneController implements Initializable {
                     if(!stage.isShowing()) {
                         iValuePID.setText(NumpadController.numpadValue);
                         //TODO: Notify the PIDController
-                        //TODO: Retain information in case of misclick, and closing the window without editing
                     }
                 } catch (IOException e) {
                     e.printStackTrace();
@@ -107,6 +106,7 @@ public class ControlsSceneController implements Initializable {
         dValuePID.setOnMouseClicked(event -> {
             if(event.getButton() == MouseButton.PRIMARY) {
                 try {
+                    NumpadController.oldValue = dValuePID.getText();
                     Stage stage = new Stage();
                     Parent root = FXMLLoader.load(getClass().getResource("/FXML/NumpadScreen.fxml"));
                     stage.initModality(Modality.APPLICATION_MODAL);
@@ -120,7 +120,6 @@ public class ControlsSceneController implements Initializable {
                     if(!stage.isShowing()) {
                         dValuePID.setText(NumpadController.numpadValue);
                         //TODO: Notify the PIDController
-                        //TODO: Retain information in case of misclick, and closing the window without editing
                     }
                 } catch (IOException e) {
                     e.printStackTrace();
