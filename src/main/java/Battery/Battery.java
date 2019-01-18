@@ -15,4 +15,5 @@ public class Battery {
     public static void setYolo(int newValue) {
         yolo = newValue;
     }
+    //test
 }
