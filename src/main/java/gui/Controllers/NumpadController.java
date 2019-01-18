@@ -24,10 +24,15 @@ public class NumpadController implements Initializable {
 
     public static String oldValue;
 
+    @FXML
+    public static Stage stage;
+
     public void initialize(URL loc, ResourceBundle resource) {
-        System.out.println(oldValue);
         numpadValue = "";
         numpadText.setText(oldValue);
+        stage.setOnCloseRequest(event1 -> {
+            numpadValue = oldValue;
+        });
     }
 
     public void clickButtonOne() {

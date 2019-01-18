@@ -69,6 +69,7 @@ public class ControlsSceneController implements Initializable {
                 try {
                     NumpadController.oldValue = vPValuePID.getText();
                     Stage stage = new Stage();
+                    NumpadController.stage = stage;
                     Parent root = FXMLLoader.load(getClass().getResource("/FXML/NumpadScreen.fxml"));
                     stage.initModality(Modality.APPLICATION_MODAL);
                     stage.setTitle("Numpad");
@@ -93,6 +94,7 @@ public class ControlsSceneController implements Initializable {
                 try {
                     NumpadController.oldValue = vIValuePID.getText();
                     Stage stage = new Stage();
+                    NumpadController.stage = stage;
                     Parent root = FXMLLoader.load(getClass().getResource("/FXML/NumpadScreen.fxml"));
                     stage.initModality(Modality.APPLICATION_MODAL);
                     stage.setTitle("Numpad");
@@ -117,6 +119,7 @@ public class ControlsSceneController implements Initializable {
                 try {
                     NumpadController.oldValue = vDValuePID.getText();
                     Stage stage = new Stage();
+                    NumpadController.stage = stage;
                     Parent root = FXMLLoader.load(getClass().getResource("/FXML/NumpadScreen.fxml"));
                     stage.initModality(Modality.APPLICATION_MODAL);
                     stage.setTitle("Numpad");
@@ -141,6 +144,7 @@ public class ControlsSceneController implements Initializable {
                 try {
                     NumpadController.oldValue = hPValuePID.getText();
                     Stage stage = new Stage();
+                    NumpadController.stage = stage;
                     Parent root = FXMLLoader.load(getClass().getResource("/FXML/NumpadScreen.fxml"));
                     stage.initModality(Modality.APPLICATION_MODAL);
                     stage.setTitle("Numpad");
@@ -165,6 +169,7 @@ public class ControlsSceneController implements Initializable {
                 try {
                     NumpadController.oldValue = hIValuePID.getText();
                     Stage stage = new Stage();
+                    NumpadController.stage = stage;
                     Parent root = FXMLLoader.load(getClass().getResource("/FXML/NumpadScreen.fxml"));
                     stage.initModality(Modality.APPLICATION_MODAL);
                     stage.setTitle("Numpad");
@@ -189,6 +194,7 @@ public class ControlsSceneController implements Initializable {
                 try {
                     NumpadController.oldValue = hDValuePID.getText();
                     Stage stage = new Stage();
+                    NumpadController.stage = stage;
                     Parent root = FXMLLoader.load(getClass().getResource("/FXML/NumpadScreen.fxml"));
                     stage.initModality(Modality.APPLICATION_MODAL);
                     stage.setTitle("Numpad");
